@@ -1,0 +1,124 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+  }
+  
+  h1 {
+    color: #333;
+    background-color: aquamarine;
+    width: 230px; 
+  }
+  
+  h2 {
+    color: #555;
+    margin-top: 20px;
+    
+  }
+
+  #proeduca{
+    background-color: black;
+    color: aquamarine;
+    width: 200px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    text-align: center;
+    border-radius: 20px;
+    
+  }
+
+  #profesor{
+    background-color: black;
+    color: whitesmoke;
+    width: 150px;
+    
+  }
+
+  #director{
+    background-color: black;
+    color: whitesmoke;
+    width: 110px;
+
+  }
+
+  #jefe{
+    background-color: black;
+    color: whitesmoke;
+    width: 200px;
+
+  }
+
+  #ciclos{
+    background-color: black;
+    color: whitesmoke;
+    width: 220px;
+
+  }
+
+  #enlaces{
+    background-color: black;
+    color: whitesmoke;
+    width: 220px;
+
+  }
+  #formulario{
+    background-color: aquamarine;
+    color: black;
+    width: 300px;
+
+  }
+
+  #c{
+    color: red;
+    font-weight: 800;
+  }
+
+  #n{
+    color: red;
+    font-weight: 800;
+  }
+  
+  table {
+    border-collapse: collapse;
+    margin-top: 10px;
+  }
+  
+  table th , table td {
+    border: 1px solid #ccc;
+    padding: 8px;
+  }
+  
+  ul {
+    margin-top: 10px;
+  }
+  
+  form {
+    margin-top: 20px;
+  }
+  
+  label {
+    display: block;
+    margin-top: 10px;
+    font-weight: bold;
+  }
+  
+  input[type="text"],
+  input[type="email"],
+  textarea {
+    width: 300px;
+    padding: 5px;
+    border-radius: 20px;
+    
+  }
+  
+  input[type="submit"] {
+    margin-bottom: 20px;
+    padding: 5px 10px;
+    background-color: #555;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+  }
+  
+  
+
+ 
+  

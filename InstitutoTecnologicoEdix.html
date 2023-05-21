@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Instituto Tecnológico Edix</title>
+  <link rel="stylesheet" type="text/css" href="InstitutoTecnologicoEdix.css">
+</head>
+<body>
+  <xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
+    <xsl:template match="/">
+      <xsl:apply-templates select="/ite" />
+    </xsl:template>
+    
+    <xsl:template match="ite">
+      <h1 id="proeduca">PROEDUCA<xsl:value-of select="@nombre" /></h1>
+      <h1>Empresa: Edix <xsl:value-of select="empresa" /></h1>
+      <p>Teléfono: 91 234 56 47 <xsl:value-of select="telefono" /></p>
+      
+      <h2 id="profesor">Profesores</h2>
+      <table>
+        <tr>
+          <th id="c">Código</th>
+          <th id="n">Nombre</th>
+        </tr>
+        <tr>
+          <td>0001</td>
+          <td>Félix</td>
+        </tr>
+        <tr>
+          <td>0002</td>
+          <td>Raquel</td>
+        </tr>
+        <tr>
+          <td>0003</td>
+          <td>Raúl</td>
+        </tr>
+        <xsl:for-each select="profesores/profesor">
+          <tr> <!--celda en formato xsl pero en el html-->
+            <td>0004<xsl:value-of select="id" /></td>
+            <td>Tomás<xsl:value-of select="nombre" /></td>
+          </tr>
+        </xsl:for-each>
+      </table>
+      
+      <h2 id="director">Director</h2>
+      <p>Nombre: Chon <xsl:value-of select="director/nombre" /></p>
+      <p>Despacho: Número 31, 3º Planta, Edificio A <xsl:value-of select="director/despacho" /></p>
+      
+      <h2 id="jefe" >Jefe de Estudios</h2>
+      <p>Nombre: Dani <xsl:value-of select="jefe_estudios/nombre" /></p>
+      <p>Despacho: Número 27, 2ª Planta, Edificio B <xsl:value-of select="jefe_estudios/despacho" /></p>
+      
+      <h2 id="ciclos">Ciclos Formativos</h2>
+      <table>
+        <tr>
+          <th>ID</th>
+          <th>Nombre</th>
+          <th>Grado</th>
+          <th>Año decreto</th>
+          <tr>
+            <td>ASIR</td>
+            <td>Administración de Sistemas Infórmaticos en Red</td>
+            <td>Superior</td>
+            <td>2009</td>
+          </tr>
+          <tr>
+            <td>DAW</td>
+            <td>Desarrollo de Aplicaciones Web</td>
+            <td>Superior</td>
+            <td>2010</td>
+          </tr>
+          
+        </tr>
+        <xsl:for-each select="ciclos/ciclo">
+          <tr> <!--celda en formato xsl pero en el html-->
+            <td>DAM<xsl:value-of select="@id" /></td>
+            <td>Desarrollo de Aplicaciones Multiplataforma<xsl:value-of select="nombre" /></td>
+            <td>Superior<xsl:value-of select="grado" /></td>
+            <td>2010<xsl:value-of select="decretoTitulo/@año" /></td>
+          </tr>
+        </xsl:for-each>
+      </table>
+      
+      <h2 id="enlaces">Enlaces de interés</h2>
+      <ul>
+        <li><a href="https://www.edix.com/es/">Página oficial de Edix/Unir</a></li>
+        <li><a href="https://unirfp.unir.net/ingenieria/fp-grado-asir/">Grado de ASIR</a></li>
+        <li><a href="https://unirfp.unir.net/ingenieria/fp-grado-desarrollo-aplicaciones-multiplataforma-dam/">Grado DAM</a></li>
+        <li><a href="https://unirfp.unir.net/ingenieria/fp-grado-daw-desarrollo-de-aplicaciones-web/">Grado de DAW</a></li>
+      </ul>
+      
+      <h2 id="formulario">Formulario de contacto</h2>
+      <form action="edix.jsp" method="post"> <!--Los datos no salen en la URL con el method post-->
+        <label for="name">Nombre:</label>
+        <input type="text" id="name" name="name" required />
+        
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required />
+        
+        <label for="message">Mensaje:</label>
+        <textarea style="resize : none" rows="2" cols="80" id="message" name="message" required></textarea>
+        
+        <input id="boton" type="submit" value="¡Contáctanos!" />
+      </form>
+    </xsl:template>
+  </xsl:stylesheet>
+</body>
+</html>
