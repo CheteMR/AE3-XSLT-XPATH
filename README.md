@@ -4,3 +4,7 @@
 *Imagen en donde se compueba mediante una herramienta de terceros que introduciendo el XML y el XSLT nos genera un archivo HTML, esto quiere decir que el archivo XML y XSLT están correctamente configurados*
 
 [![comprobacion.png](https://i.postimg.cc/Z55R8Zhp/comprobacion.png)](https://postimg.cc/kBLqC0Gg)
+
+## Así quedaría la prueba 
+
+[![web.png](https://i.postimg.cc/3wwtQyQN/web.png)](https://postimg.cc/PCBWm5xn)
